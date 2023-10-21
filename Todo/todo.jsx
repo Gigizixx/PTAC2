@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {useEffect} from "react";
 import 'todo.css';
 
 export default function Todo() {
+  const listaLocalStorage = localStorage.setItem("Lista";
   const [produtos, setProdutos] = useState([]);
   const [id, setId] = useState(1);
   const [nomeProduto, setNomeProduto] = useState("");
   const [preco, setPreco] = useState("");
   const [quantidadeEstoque, setQuantidadeEstoque] = useState("");
   
-
+useEffect (() => { localStoragr.setItem("Lista"),JSON.stringify(lista))},[lista];
   function adicionarProduto(e) {
     e.preventDefault();
     setProdutos([
