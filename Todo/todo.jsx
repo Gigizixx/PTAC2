@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import 'todo.css';
 
 export default function Todo() {
-  const listaLocalStorage = localStorage.setItem("Lista";
+  const listaLocalStorage = localStorage.setItem("Lista");
   const [produtos, setProdutos] = useState([]);
   const [id, setId] = useState(1);
   const [nomeProduto, setNomeProduto] = useState("");
