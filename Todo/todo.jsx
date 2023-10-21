@@ -11,7 +11,7 @@ export default function Todo() {
   const [preco, setPreco] = useState("");
   const [quantidadeEstoque, setQuantidadeEstoque] = useState("");
   
-useEffect (() => { localStoragr.setItem("Lista"),JSON.stringify(lista))},[lista];
+useEffect (() => { localStorage.setItem("Lista"),JSON.stringify(lista))},[lista];
   function adicionarProduto(e) {
     e.preventDefault();
     setProdutos([
