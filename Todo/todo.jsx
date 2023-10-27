@@ -4,14 +4,16 @@ import {useEffect} from "react";
 import 'todo.css';
 
 export default function Todo() {
-  const listaLocalStorage = localStorage.setItem("Lista");
+  const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"));
   const [produtos, setProdutos] = useState([]);
-  const [id, setId] = useState(1);
+  const [id, setId] = useState(listaLocalStorage [listaLocalStorage.length -1]?.id +1|| 1);
   const [nomeProduto, setNomeProduto] = useState("");
   const [preco, setPreco] = useState("");
   const [quantidadeEstoque, setQuantidadeEstoque] = useState("");
-  
+  const [lista, setlista] = useState(listaLocalStorage ||[]);
+
 useEffect (() => { localStorage.setItem("Lista",JSON.stringify(lista))},[lista]);
+
   function adicionarProduto(e) {
     e.preventDefault();
     setProdutos([
